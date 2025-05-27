@@ -1,0 +1,114 @@
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Card */
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 3rem;
+  max-width: 500px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation */
+.animate-fadeIn {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Typography */
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1565c0;
+}
+
+.dashboard-subtitle {
+  font-size: 1.1rem;
+  color: #616161;
+  margin-bottom: 2rem;
+}
+
+/* User Info Styling */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.info-item {
+  background-color: #f1f8ff;
+  border-left: 4px solid #2196f3;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.info-item:hover {
+  background-color: #e3f2fd;
+}
+
+.info-item label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  color: #0d47a1;
+}
+
+/* Logout Button */
+.logout-container {
+  text-align: right;
+  margin-top: 1.5rem;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.35rem 0.8rem;
+  border-radius: 0.3rem;
+  border: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(220, 53, 69, 0.4);
+}
+
+.logout-btn:hover {
+  background-color: #a71d2a;
+  box-shadow: 0 4px 10px rgba(167, 29, 42, 0.7);
+  cursor: pointer;
+}

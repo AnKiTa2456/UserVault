@@ -1,0 +1,23 @@
+<div class="dashboard-container">
+  <div class="dashboard-card animate-fadeIn">
+    <h2 class="dashboard-title">Welcome, {{ user?.name }} 👋</h2>
+    <p class="dashboard-subtitle">Here are your profile details</p>
+
+    <div class="user-info">
+      <div class="info-item">
+        <label for="email">Email:</label>
+        <span id="email">{{ user?.email }}</span>
+      </div>
+      <div class="info-item">
+        <label for="password">Password:</label>
+        <span id="password">{{ user?.password }}</span> <!-- For demo only -->
+      </div>
+    </div>
+
+    <div class="logout-container">
+      <button class="logout-btn" (click)="onLogout()">
+        <i class="bi bi-box-arrow-right"></i> Logout
+      </button>
+    </div>
+  </div>
+</div>

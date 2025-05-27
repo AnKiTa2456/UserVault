@@ -1,0 +1,25 @@
+<div class="form-container">
+
+  <div *ngIf="activeForm === 'login'" class="form-card">
+    <h2>Login</h2>
+    <form (ngSubmit)="loginForm()" #loginFormRef="ngForm" novalidate>
+      <input type="email" name="email" [(ngModel)]="loginObj.email" required placeholder="Email" />
+      <input type="password" name="password" [(ngModel)]="loginObj.password" required placeholder="Password" />
+      <button type="submit" [disabled]="loginFormRef.invalid">Login</button>
+    </form>
+    <p>Not registered? <a (click)="toggleForm('register')">Register here</a></p>
+  </div>
+
+  <div *ngIf="activeForm === 'register'" class="form-card">
+    <h2>Register</h2>
+    <form (ngSubmit)="registerForm()" #registerFormRef="ngForm" novalidate>
+      <input type="text" name="firstName" [(ngModel)]="registerObj.firstName" required placeholder="First Name" />
+      <input type="text" name="lastName" [(ngModel)]="registerObj.lastName" required placeholder="Last Name" />
+      <input type="email" name="email" [(ngModel)]="registerObj.email" required placeholder="Email" />
+      <input type="password" name="password" [(ngModel)]="registerObj.password" required placeholder="Password" />
+      <button type="submit" [disabled]="registerFormRef.invalid">Register</button>
+    </form>
+    <p>Already registered? <a (click)="toggleForm('login')">Login here</a></p>
+  </div>
+
+</div>
